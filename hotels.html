@@ -7,15 +7,13 @@
   <body>
     <header class="main-header">
       <nav class="header-navigation">
-        <ul class="navigation-left">
+        <ul class="navigation-list">
           <li class="navigation-item">
             <a href="#">Информация</a>
           </li>
           <li class="navigation-item">
             <a href="#">Фото и видео</a>
           </li>
-        </ul>
-        <ul class="navigation-right">
           <li class="navigation-item">
             <a href="#">Карта штата</a>
           </li>
@@ -25,14 +23,55 @@
         </ul>
       </nav>
       <a href="index.html" class="header-logo">
-        <img class="logo" src="http://placehold.it/138x70" alt="Логотип города Седоны" width="138" height="70">
+        <img class="logo" src="img/logo.png" alt="Логотип города Седоны" width="138" height="70">
       </a>
     </header>
     <main class="main">
       <h1 class="visually-hidden">Гостиницы Седоны</h1>
       <section class="filter">
-        <form class="filter-hotels" action="get">
-          <!-- Форма поиска -->
+        <h2 class="visually-hidden">Подобрать гостиницу по параметрам</h2>
+        <form class="filter-hotels" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="checkbox-list">
+                <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+                <label for="swimming-pool">Бассейн</label>
+              </li>
+              <li class="checkbox-list">
+                <input type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="checkbox-list">
+                <input type="checkbox" name="wi-fi" id="wi-fi">
+                <label for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="checkbox-list">
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="checkbox-list">
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="checkbox-list">
+                <input type="checkbox" name="appartments" id="appartments" checked>
+                <label for="appartments">Аппартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <div><!-- Слайдер формы с двумя ползунками -->
+              <span></span><span></span>
+            </div>
+            <button type="submit">Показать</button>
+          </fieldset>
         </form>
       </section>
       <section class="sorting">
@@ -68,10 +107,10 @@
       </section>
       <section class="hotels">
         <ul class="hotels-list">
-          <li class="hotels-item clearfix">            
-            <img class="hotel-preview" src="http://placehold.it/135x90" alt="" width="135" height="90">
+          <li class="hotels-item clearfix">
+            <img class="hotel-preview" src="img/hotel-1.jpg" alt="Amara Resort &#38; SPA" width="135" height="90">
             <div class="rating-wrapper">
-              <div>
+              <div class="rating-stars">
                 <img src="http://placehold.it/80x30" alt="">
               </div>
               <div class="rating">
@@ -88,11 +127,11 @@
               <div class="column-2">
                 <span>От 4000 р.</span>
                 <a class="button" href="#">Забронировать</a>
-              </div>              
-            </div>            
+              </div>
+            </div>
           </li>
-          <li class="hotels-item clearfix">            
-            <img class="hotel-preview" src="http://placehold.it/135x90" alt="" width="135" height="90">
+          <li class="hotels-item clearfix">
+            <img class="hotel-preview" src="img/hotel-2.jpg" alt="Desert Quail Inn" width="135" height="90">
             <div class="rating-wrapper">
               <div>
                 <img src="http://placehold.it/80x30" alt="">
@@ -111,11 +150,11 @@
               <div class="column-2">
                 <span>От 3000 р.</span>
                 <a class="button" href="#">Забронировать</a>
-              </div>              
-            </div>            
+              </div>
+            </div>
           </li>
-          <li class="hotels-item clearfix">            
-            <img class="hotel-preview" src="http://placehold.it/135x90" alt="" width="135" height="90">
+          <li class="hotels-item clearfix">
+            <img class="hotel-preview" src="img/hotel-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             <div class="rating-wrapper">
               <div>
                 <img src="http://placehold.it/80x30" alt="">
@@ -134,8 +173,8 @@
               <div class="column-2">
                 <span>От 2000 р.</span>
                 <a class="button" href="#">Забронировать</a>
-              </div>              
-            </div>            
+              </div>
+            </div>
           </li>
         </ul>
       </section>
