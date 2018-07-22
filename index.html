@@ -114,17 +114,21 @@
           и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
         <div class="hotels-search">
-          <h3>Поиск гостиницы в Седоне</h3>
+          <button class="open-form-button" type="button">
+            <span class="ie11-hack">
+              Поиск гостиницы в Седоне
+            </span>
+          </button>
           <form class="booking" action="https://echo.htmlacademy.ru/" method="get">
             <label for="booking-arrival">Дата заезда:</label>
-            <input type="text" name="booking-arrival" id="booking-arrival" value="4 июля 2017">
+            <input class="booking-date" type="text" name="booking-arrival" id="booking-arrival" value="24 апреля 2017">
             <label for="booking-departure">Дата выезда:</label>
-            <input type="text" name="booking-departure" id="booking-departure" value="24 апреля 2017">
+            <input class="booking-date" type="text" name="booking-departure" id="booking-departure" value="4 июля 2017">
             <label for="booking-adults">Взрослые:</label>
-            <input type="text" name="booking-adults" id="booking-adults" value="2">
+            <input class="booking-residents-number" type="text" name="booking-adults" id="booking-adults" value="2">
             <label for="booking-children">Дети:</label>
-            <input type="text" name="booking-children" id="booking-children" value="0">
-            <button type="submit">Найти</button>
+            <input class="booking-residents-number" type="text" name="booking-children" id="booking-children" value="0">
+            <button class="form-submit-button" type="submit">Найти</button>
           </form>
         </div>
       </section>
