@@ -46,6 +46,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.1);
@@ -436,7 +437,7 @@ body {
 }
 
 .map {
-  min-height: 473px;
+  min-height: 593px;
   background-color: #dfe7cd;
   background-image: url("../img/map.png");
   background-position: center;
@@ -448,4 +449,114 @@ body {
   display: block;
   border: none;
   width: 100%;
+}
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 36px 100px 36px 133px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hashtag {
+  margin-right: 27px;
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-list li {
+  margin-right: 6px;
+}
+
+.social-list li:last-child {
+  margin-right: 0;
+}
+
+.social-item {
+  display: block;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-icon-container {
+  width: 100%;
+  height: 100%;
+}
+
+.social-item .social-icon-container {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-twitter .social-icon-container {
+  background-image: url("../img/twitter-icon.png");
+}
+
+.social-facebook .social-icon-container {
+  background-image: url("../img/fb-icon.png");
+}
+
+.social-youtube .social-icon-container {
+  background-image: url("../img/youtube-icon.png");
+}
+
+.social-item:hover,
+.social-item:focus {
+  background-color: #669ec0;
+}
+
+.social-item:active {
+  background-color: #5496bd;
+}
+
+.social-item:active .social-icon-container {
+  opacity: 0.3;
+}
+
+.copyright {
+  margin-right: 5px;
+  font-family: "PTSans-Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.copyright-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 115px;
+  height: 40px;
+  fill: #000000;
+}
+
+.copyright-logo:hover,
+.copyright-logo:focus {
+  fill: #81b3d2;
+}
+
+.copyright-logo:active {
+  fill: #bdbbbc;
 }
