@@ -50,6 +50,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.1);
+  background-color: #ffffff;
   font-family: "PTSans-Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -288,7 +289,6 @@ body {
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 21px;
   color: #ffffff;
-  text-transform: uppercase;
 }
 
 .open-form-button:hover,
@@ -330,8 +330,8 @@ body {
   margin-bottom: 29px;
   padding: 0 13px;
   background-color: #f5f5f5;
-  text-transform: uppercase;
   line-height: 38px;
+  text-transform: uppercase;
 }
 
 .input-container {
@@ -422,7 +422,6 @@ body {
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 21px;
   color: #ffffff;
-  text-transform: uppercase;
 }
 
 .form-submit-button:hover,
@@ -470,7 +469,6 @@ body {
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
-  text-transform: uppercase;
   color: #000000;
 }
 
@@ -540,7 +538,6 @@ body {
   font-family: "PTSans-Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 40px;
-  text-transform: uppercase;
   color: #000000;
 }
 
@@ -559,4 +556,63 @@ body {
 
 .copyright-logo:active {
   fill: #bdbbbc;
+}
+
+.filter {
+  padding: 30px 70px;
+  background-color: #4c545b;
+  background-image: url("../img/hotels-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.filter-hotels {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-hotels fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-hotels legend {
+  font-family: "PTSans-Bold", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.filter-hotels .checkbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checkbox-item label {
+  position: relative;
+  padding-left: 42px;
+  line-height: 25px;
+}
+
+.filter-checkbox:checked ~ label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.png");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.filter-checkbox:not(:checked) ~ label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.png");
+  background-position: left;
+  background-repeat: no-repeat;
 }
