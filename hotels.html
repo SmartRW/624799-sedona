@@ -33,7 +33,7 @@
       <section class="filter">
         <h2 class="visually-hidden">Подобрать гостиницу по параметрам</h2>
         <form class="filter-hotels" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="filter-features">
+          <fieldset class="filters-features">
             <legend>Инфраструктура:</legend>
             <ul class="checkbox-list">
               <li class="checkbox-item">
@@ -69,25 +69,31 @@
           </fieldset>
           <fieldset class="filters-price">
             <legend>Стоимость в сутки (Р):</legend>
-            <div><!-- Слайдер формы с двумя ползунками -->
-              <span></span><span></span>
+            <div class="price-range">
+              <input class="price-range-from" type="text" name="price-from" value="От 0" readonly>
+              <input class="price-range-to" type="text" name="price-to" value="До 3000" readonly>
             </div>
-            <button type="submit">Показать</button>
+            <div class="price-slider">
+              <span class="price-slider-from"></span>
+              <span class="price-slider-to"></span>
+            </div>
+            <button class="filter-submit" type="submit">
+              <span class="ie11-hack">Показать</span>
+            </button>
           </fieldset>
         </form>
       </section>
       <section class="sorting">
         <h2 class="visually-hidden">Сортировать гостиницы</h2>
-        <div class="found-counter">
+        <div class="sorting-counter-container">
           <span>Найдено:</span>
-          <span class="counter">
-            <!--Выводить сюда значение числа найденных отелей-->
+          <span class="sorting-counter">
+            3<!--Выводить сюда значение числа найденных отелей-->
           </span>
         </div>
-        <div class="sorting-wrapper">
-          <span>Сортировка:</span>
+          <span class="sorting-type-header">Сортировка:</span>
           <ul class="sorting-type">
-            <li class="sorting-current">
+            <li class="sorting-item sorting-current">
               <a>По цене</a>
             </li>
             <li class="sorting-item">
@@ -98,83 +104,85 @@
             </li>
           </ul>
           <ul class="ranking-type">
-            <li class="ranking-current">
-              <a>По возрастанию</a>
+            <li class="ranking-item ranking-current">
+              <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><polygon points="5.5 0 0 10 11 10 "/></svg>
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
             </li>
             <li class="ranking-item">
-              <a href="#">По убыванию</a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><polygon points="5.5 10 0 0 11 0 "/></svg>
+                <span class="visually-hidden">По убыванию</span>
+              </a>
             </li>
           </ul>
-        </div>
       </section>
-      <section class="hotels">
+      <section class="output-hotels">
         <ul class="hotels-list">
-          <li class="hotels-item clearfix">
+          <li class="hotels-item">
             <img class="hotel-preview" src="img/hotel-1.jpg" alt="Amara Resort &#38; SPA" width="135" height="90">
-            <div class="rating-wrapper">
-              <div class="rating-stars">
-                <img src="http://placehold.it/80x30" alt="">
-              </div>
-              <div class="rating">
-                <span>Рейтинг: </span>
-                <span>8,5</span>
-              </div>
-            </div>
             <div class="hotels-wrapper">
               <h3 class="hotels-name">Amara Resort &#38; SPA</h3>
-              <div class="column-1">
-                <span>Гостиница</span>
-                <a class="button" href="#">Подробнее</a>
+              <div class="type-price-wrapper">
+                <div class="hotels-type">Гостиница</div>
+                <div class="hotels-price">От 4000 р.</div>
               </div>
-              <div class="column-2">
-                <span>От 4000 р.</span>
-                <a class="button" href="#">Забронировать</a>
+              <a class="hotels-detailed-button" href="#">Подробнее</a>
+              <a class="hotels-booking-button" href="#">Забронировать</a>
               </div>
             </div>
-          </li>
-          <li class="hotels-item clearfix">
-            <img class="hotel-preview" src="img/hotel-2.jpg" alt="Desert Quail Inn" width="135" height="90">
             <div class="rating-wrapper">
-              <div>
-                <img src="http://placehold.it/80x30" alt="">
+              <div class="rating-stars rating-stars-four">
+                <span class="visually-hidden">Четыре звезды</span>
               </div>
               <div class="rating">
                 <span>Рейтинг: </span>
-                <span>8,9</span>
+                <span class="rating-number">8,5</span>
               </div>
             </div>
+          </li>
+          <li class="hotels-item">
+            <img class="hotel-preview" src="img/hotel-3.jpg" alt="Desert Quail Inn" width="135" height="90">
             <div class="hotels-wrapper">
               <h3 class="hotels-name">Desert Quail Inn</h3>
-              <div class="column-1">
-                <span>Мотель</span>
-                <a class="button" href="#">Подробнее</a>
+              <div class="type-price-wrapper">
+                <div class="hotels-type">Мотель</div>
+                <div class="hotels-price">От 3000 р.</div>
               </div>
-              <div class="column-2">
-                <span>От 3000 р.</span>
-                <a class="button" href="#">Забронировать</a>
+              <a class="hotels-detailed-button" href="#">Подробнее</a>
+              <a class="hotels-booking-button" href="#">Забронировать</a>
               </div>
             </div>
-          </li>
-          <li class="hotels-item clearfix">
-            <img class="hotel-preview" src="img/hotel-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             <div class="rating-wrapper">
-              <div>
-                <img src="http://placehold.it/80x30" alt="">
+              <div class="rating-stars rating-stars-three">
+                <span class="visually-hidden">Три звезды</span>
               </div>
               <div class="rating">
                 <span>Рейтинг: </span>
-                <span>9,2</span>
+                <span class="rating-number">8,9</span>
               </div>
             </div>
+          </li>
+          <li class="hotels-item">
+            <img class="hotel-preview" src="img/hotel-2.jpg" alt="Villas at Poco Diablo" width="135" height="90">
             <div class="hotels-wrapper">
               <h3 class="hotels-name">Villas at Poco Diablo</h3>
-              <div class="column-1">
-                <span>Аппартаменты</span>
-                <a class="button" href="#">Подробнее</a>
+              <div class="type-price-wrapper">
+                <div class="hotels-type">Аппартаменты</div>
+                <div class="hotels-price">От 2000 р.</div>
               </div>
-              <div class="column-2">
-                <span>От 2000 р.</span>
-                <a class="button" href="#">Забронировать</a>
+              <a class="hotels-detailed-button" href="#">Подробнее</a>
+              <a class="hotels-booking-button" href="#">Забронировать</a>
+              </div>
+            </div>
+            <div class="rating-wrapper">
+              <div class="rating-stars rating-stars-two">
+                <span class="visually-hidden">Две звезды</span>
+              </div>
+              <div class="rating">
+                <span>Рейтинг: </span>
+                <span class="rating-number">9,2</span>
               </div>
             </div>
           </li>
