@@ -411,7 +411,8 @@ body {
   background-color: #ebebeb;
 }
 
-.booking input:focus {
+.booking input:focus,
+.residents-number-change:focus ~ input {
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
 }
