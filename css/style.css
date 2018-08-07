@@ -97,6 +97,14 @@ body {
   opacity: 0.3;
 }
 
+.navigation-current a,
+.navigation-current:hover a,
+.navigation-current:focus a,
+.navigation-current:active a {
+  color: #766357;
+  opacity: 1;
+}
+
 .header-logo {
   position: absolute;
   top: 0;
@@ -456,6 +464,7 @@ body {
   background-color: #9fc5dd;
   font-family: "PTSans-Bold", "Arial", sans-serif;
   font-size: 21px;
+  text-transform: uppercase;
   color: #ffffff;
 }
 

@@ -7,6 +7,8 @@ let reduceAdults = document.querySelector('.input-adults .residents-number-reduc
 let addChildren = document.querySelector('.input-children .residents-number-add');
 let reduceChildren = document.querySelector('.input-children .residents-number-reduce');
 
+booking.classList.add('booking-popup');
+
 openBooking.addEventListener('click', function (evt) {
   evt.preventDefault();
   booking.classList.toggle('booking-popup');
