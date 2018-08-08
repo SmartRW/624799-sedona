@@ -257,11 +257,7 @@ body {
 }
 
 .advantages-item {
-  -ms-flex-preferred-size: 256px;
-      flex-basis: 256px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 400px;
   min-height: 304px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -434,6 +430,8 @@ body {
 .booking input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 38px;
+  margin-left: auto;
   border: none;
   margin-bottom: 29px;
   padding: 0 13px;
@@ -449,9 +447,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .booking-calendar {
@@ -467,14 +462,17 @@ body {
 }
 
 .booking-calendar:hover,
-.booking-calendar:focus
- {
+.booking-calendar:focus {
   fill: #000000;
 }
 
-.booking-calendar:active
- {
+.booking-calendar:active {
+  padding: 0 8px;
   fill: #81b3d2;
+}
+
+.booking-calendar svg {
+  position: relative;
 }
 
 .booking input:hover {
@@ -489,6 +487,16 @@ body {
 
 .booking-date {
   width: 346px;
+}
+
+.booking-date::-ms-clear {
+  display: none;
+}
+
+.residents-container {
+   -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .booking-residents-number {
